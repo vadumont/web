@@ -67,21 +67,33 @@ nav a:hover {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.formulaire_contact {
+.connecte_text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.titre_contact {
+    display: block;
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 70px;
+}
+
+.formulaire {
     position: absolute;
     margin-top: 50px;
     margin-left: 50px;
 }
 
-.formulaire_contact div {
+.formulaire div {
     padding: 10px;
 }
 
-.button {
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 120px;
+.formulaire div input {
+    margin-top: 20px;
 }
+
 
 .titre_hall {
     flex: 1;
@@ -117,22 +129,105 @@ td {
 
 tr:hover {background-color: cadetblue;}
 
-form {
-    background-color:#FAFAFA;
-    padding:10px;
-    width:280px;
+
+input.input1 {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px;
 }
 
-input, textarea, select {
-    padding:3px;
-    border:1px solid #F5C5C5;
-    border-radius:5px;
-    width:200px;
-    box-shadow:1px 1px 2px #C0C0C0 inset;
+.input1 {
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font-size: 15px;
+    line-height: 1.5;
+    
+    color: #666666;
 }
 
-.titre_contact {
-    margin-left: 60px;
+input {
+    outline: none;
+    border: none;
+}
+
+.button_validate {
+    display: block;
+    text-decoration: none;
+    margin-top: 400px;
+    margin-left: 100px;
+}
+
+.button_validate_deconnexion {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.button_validate_deconnexion button{
+    background: transparent;
+    border : none;
+	border-radius: 25px;
+    color: #FFF;  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    padding: 10px 50px;
+}
+.button_validate_deconnexion button:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+
+.button_validate_connexion {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.button_validate_connexion button{
+    background: transparent;
+    border : none;
+	border-radius: 25px;
+    color: #FFF;  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    padding: 10px 50px;
+}
+.button_validate_connexion button:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.button_validate_inscription {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.button_validate_inscription button{
+    background: transparent;
+    border : none;
+	border-radius: 25px;
+    color: #FFF;  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    padding: 10px 50px;
+}
+.button_validate_inscription button:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+
+.button_validate button{
+    background: transparent;
+    border : none;
+	border-radius: 25px;
+    color: #FFF;  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    padding: 10px 50px;
+}
+.button_validate button:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
 }
 
 footer {

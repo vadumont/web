@@ -1,5 +1,6 @@
 <?php
     include 'design.php';
+    session_start();
     echo "$header";
 ?>
 
@@ -8,23 +9,52 @@
         <div class="div1">
             <h2 class="titres">Connexion</h2>
 
-            <form class="formulaire_contact" action="login.php" method="get">
-                <div>
-                    <label for="peudo">Login :</label>
-                    <input type="text" id="pseudo" name="pseudo">
-                </div>
-                <div>
-                    <label for="mdp">Mot de passe:</label>
-                    <input type="text" id="mdp" name="mdp">
-                </div>
-                <div class="button">
-                    <button type="submit">Envoyer le message</button>
-                </div>
-            </form>
+
+            <?php
+
+                if(isset($_SESSION['pseudo'])) {
+                    $pseudo_set=$_SESSION['pseudo'];
+                    echo "<p class=\"connecte_text\">Bienvenue $pseudo_set</p>";
+                    echo "                    <div class=\"button_validate_deconnexion\">
+                    <button type=\"submit\">Se déconnecter</button>
+                </div>";
+                }
+                else {
+                    echo "<form class=\"formulaire\" action=\"login.php\" method=\"get\">
+                    <div>
+                        <input class=\"input1\" type=\"text\" name=\"pseudo\" placeholder=\"Pseudo\">
+                    </div>
+                    <div>
+                        <input class=\"input1\" type=\"password\" name=\"mdp\" placeholder=\"Mot de passe\">
+                    </div>
+                    <div class=\"button_validate_connexion\">
+                        <button type=\"submit\">Envoyer le message</button>
+                    </div>
+                </form>";
+                }
+            ?>
+
+
 
         </div>
         <div class="div2">
             <h2 class="titres">Inscription</h2>
+
+            <form class="formulaire" action="register.php" method="get">
+                <div>
+                    <input class="input1" type="email" name="mail" placeholder="E-mail">
+                </div>
+                <div>
+                    <input class="input1" type="text" name="pseudo" placeholder="Pseudo">
+                </div>
+                <div>
+                    <input class="input1" type="password" name="mdp" placeholder="Mot de passe">
+                </div>
+                <div class="button_validate_inscription">
+                    <button type="submit">Envoyer le message</button>
+                </div>
+            </form>
+
         </div>
 
         <div class="div3">

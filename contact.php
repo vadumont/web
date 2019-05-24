@@ -5,17 +5,17 @@
     
         <section class="section1">
             <h1 class="titre_contact">Demande de contact</h1>
-            <form class="formulaire_contact" action="/my-handling-form-page" method="post">
+            <form class="formulaire" action="/my-handling-form-page" method="post">
                 <div>
-                    <label for="nom">Nom</label>
-                    <input type="text" id="name" name="user_name">
+                    <input class="input1" type="text" name="nom" placeholder="Nom">
                 </div>
                 <div>
-                    <label for="prenom">Prénom</label>
-                    <input type="email" id="mail" name="user_mail">
+                    <input class="input1" type="text" name="prenom" placeholder="Prénom">
                 </div>
                 <div>
-                    <label for="choix">Message</label>
+                    <input class="input1" type="email" name="mail" placeholder="E-mail">
+                </div>
+                <div>
                     <form>
                         <SELECT name="liste" size="1">
                             <OPTION>Demande de renseignement
@@ -23,8 +23,8 @@
                         </SELECT>
                     </form>
                 </div>
-                <div class="button">
-                    <button type="submit">Envoyer le message</button>
+                <div class="button_validate">
+                    <button type="submit">Valider</button>
                 </div>
             </form>
         </section>

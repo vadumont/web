@@ -9,7 +9,16 @@
     foreach($pdo->query("SELECT * from utilisateur WHERE pseudo='$loginForm'") as $row) {
         print_r($row);
         if($loginForm == $row["pseudo"]){
-            print_r($row["pseudo"]);
+
+            session_start();
+            $_SESSION['pseudo']=$_GET['pseudo'];
+            $_SESSION['mdp']=$_GET['mdp'];
+
+            header('Location: index.php');
+
+        }
+        else {
+            header('Location: index.php');
         }
     }
 } catch (PDOException $e) {
