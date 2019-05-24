@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding-top: 10px;
+    width: 100%;
+    background: ivory;
+    text-align: center;
+
+}
+
+nav {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav li {
+    flex: 1;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: brown;
+}
+
+.section1 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.div1 {
+    flex: 2;
+    border: #4CAF50;
+    text-align: center;
+}
+
+.div2 {
+    flex: 2;
+    text-align: center;
+}
+
+.div3 {
+    flex: 1;
+    text-align: center;
+}
+
+.titres {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.formulaire_contact {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.formulaire_contact div {
+    padding: 10px;
+}
+
+.button {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 120px;
+}
+
+.titre_hall {
+    flex: 1;
+    text-align: center;
+    font-size: 30;
+}
+
+table {
+    margin-top: 50px;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: brown;
+    color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding-left: 20px;
+    height: 50px;
+}
+
+td {
+    margin-left: 10px;
+    padding-left: 20px;
+    vertical-align: bottom;
+}
+
+tr:hover {background-color: cadetblue;}
+
+form {
+    background-color:#FAFAFA;
+    padding:10px;
+    width:280px;
+}
+
+input, textarea, select {
+    padding:3px;
+    border:1px solid #F5C5C5;
+    border-radius:5px;
+    width:200px;
+    box-shadow:1px 1px 2px #C0C0C0 inset;
+}
+
+.titre_contact {
+    margin-left: 60px;
+}
+
+footer {
+    background-color: brown;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+    height: 30px;
+}
+
