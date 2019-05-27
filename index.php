@@ -16,13 +16,13 @@
                     $pseudo_set=$_SESSION['pseudo'];
                     echo "<p class=\"connecte_text\">Bienvenue $pseudo_set</p>";
                     echo "<div class=\"button_validate_deconnexion\">
-                    <form class=\"formulaire\" action=\"deconnexion.php\" method=\"get\">
+                    <form class=\"formulaire\" action=\"action/deconnexion.php\" method=\"get\">
                     <button type=\"submit\">Se déconnecter</button>
                     </form>
                 </div>";
                 }
                 else {
-                    echo "<form class=\"formulaire\" action=\"login.php\" method=\"get\">
+                    echo "<form class=\"formulaire\" action=\"action/login.php\" method=\"get\">
                     <div>
                         <input class=\"input1\" type=\"text\" name=\"pseudo\" placeholder=\"Pseudo\">
                     </div>
@@ -42,7 +42,7 @@
         <div class="div2">
             <h2 class="titres">Inscription</h2>
 
-            <form class="formulaire" action="register.php" method="get">
+            <form class="formulaire" action="action/register.php" method="get">
                 <div>
                     <input class="input1" type="email" name="mail" placeholder="E-mail">
                 </div>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="div3">
-            <h2 class="titres">Une autre div</h2>
+            <h2 class="titres">Meilleur personnage</h2>
         </div>
 
     </section>
