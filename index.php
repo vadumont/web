@@ -12,11 +12,13 @@
 
             <?php
 
-                if(isset($_SESSION['pseudo'])) {
+                if(isset($_SESSION['pseudo']) && isset($_SESSION['mdp'])) {
                     $pseudo_set=$_SESSION['pseudo'];
                     echo "<p class=\"connecte_text\">Bienvenue $pseudo_set</p>";
-                    echo "                    <div class=\"button_validate_deconnexion\">
+                    echo "<div class=\"button_validate_deconnexion\">
+                    <form class=\"formulaire\" action=\"deconnexion.php\" method=\"get\">
                     <button type=\"submit\">Se déconnecter</button>
+                    </form>
                 </div>";
                 }
                 else {
@@ -28,7 +30,7 @@
                         <input class=\"input1\" type=\"password\" name=\"mdp\" placeholder=\"Mot de passe\">
                     </div>
                     <div class=\"button_validate_connexion\">
-                        <button type=\"submit\">Envoyer le message</button>
+                        <button type=\"submit\">Se connecter</button>
                     </div>
                 </form>";
                 }
@@ -51,7 +53,7 @@
                     <input class="input1" type="password" name="mdp" placeholder="Mot de passe">
                 </div>
                 <div class="button_validate_inscription">
-                    <button type="submit">Envoyer le message</button>
+                    <button type="submit">S'inscrire</button>
                 </div>
             </form>
 

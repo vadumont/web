@@ -11,8 +11,8 @@
                     <tr>
                         <th>PSEUDO</th>
                         <th>PERSONNAGE</th>
-                        <th>AGE</th>
-                        <th>NOMBRE DE COMBAT GAGNE</th>
+                        <th>NIVEAU</th>
+                        <th>DATE DE CREATION</th>
                     </tr>
                     <tr>
                         <td>The King</td>
