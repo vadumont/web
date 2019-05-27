@@ -11,8 +11,9 @@
             session_start();
             $_SESSION['pseudo']=$_GET['pseudo'];
             $_SESSION['mdp']=$_GET['mdp'];
+            $_SESSION['mail']=$row["mail"];
 
-            header('Location: verif_personnage.php');
+            header('Location: ../index.php');
 
         }
         else {

@@ -1,5 +1,5 @@
 <?php
-    include 'design.php';
+    include '../design.php';
     echo "$header";
 ?>
 

@@ -1,7 +1,23 @@
 <?php
     session_start();
     session_destroy();
+    
+    include '../design.php';
+    echo "$header";
+?>
 
-    header('Location: page_deconnexion.php');
 
+    <section class="section1">
+        <div class="div1">
+            <h2 class="titres">Vous avez été déconnecté !</h2>
+            <p class="deconnexion_message">Vous allez être reconduit à la page d'accueil d'ici quelques secondes</p>
+            
+            <script type="text/javascript">
+                window.setTimeout("location=('../index.php');", 3000);
+            </script>
+
+    </section>
+
+<?php
+    echo "$footer";
 ?>

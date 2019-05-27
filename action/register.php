@@ -6,21 +6,18 @@
 
    try {
     $pdo = new PDO('mysql:host=localhost;dbname=web', 'root', '');
-    foreach($pdo->query("INSERT INTO utilisateur VALUES ('$loginForm','$mailForm','$mdpForm')") as $row) {
-        if($loginForm == $row["pseudo"] && $mdpForm == $row["mdp"]){
+    $result=$pdo->query("INSERT INTO utilisateur VALUES ('$loginForm','$mailForm','$mdpForm')");
 
-            session_start();
-            $_SESSION['pseudo']=$_GET['pseudo'];
-            $_SESSION['mdp']=$_GET['mdp'];
+        if($result = false){
 
-            header('Location: index.php');
+            header('Location: ../index.php');
 
         }
         else {
             header('Location: ../index.php');
         }
     }
-} catch (PDOException $e) {
+ catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }

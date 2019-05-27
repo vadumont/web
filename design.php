@@ -12,7 +12,7 @@ $header = "<html>
 <body>
 
     <header>
-        <img id=\"logo\" src=\"img/logo.png\" height=100 width=400>
+        <a href=\"index.php\"><img id=\"logo\" src=\"img/logo.png\" height=100 width=400 /></a>
 
         <nav>
             <ul>
