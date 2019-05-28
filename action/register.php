@@ -6,16 +6,16 @@
 
    try {
     $pdo = new PDO('mysql:host=localhost;dbname=web', 'root', '');
-    $result=$pdo->query("INSERT INTO utilisateur VALUES ('$loginForm','$mailForm','$mdpForm')");
+    $result=$pdo->query("INSERT INTO utilisateur VALUE ('$mailForm','$loginForm','$mdpForm')");
 
-        if($result = false){
+        if(!$result){
 
-            header('Location: ../index.php');
+            header('Location: ../index.php?register=failed');
 
+        } else {
+            header('Location: ../index.php?register=success');
         }
-        else {
-            header('Location: ../index.php');
-        }
+       // header('Location: ../index.php?register=failed');
     }
  catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";

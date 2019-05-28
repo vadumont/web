@@ -1,14 +1,18 @@
 <?php
 
-$user_mail=$_SESSION['mail'];
+$user_mail = $_SESSION['mail'];
+$nom_personnage = $_SESSION['nom_personnage'];
+$niveau_personnage = $_SESSION['niveau_personnage'];
+$date_creation = date('Y-m-d');
 
 try {
  $pdo = new PDO('mysql:host=localhost;dbname=web', 'root', '');
- foreach($pdo->query("SELECT * from personnage WHERE user_id='$user_mail'") as $row) {
-     if($loginForm == $row["pseudo"] && $mdpForm == $row["mdp"]){
+ $result = $pdo->query("INSERT INTO personnage VALUE (0, '$nom_personnage', '$niveau_personnage', '$date_creation', '$user_mail'");
+     if($result != false ){
 
-         $_SESSION['pseudo']=$_GET['pseudo'];
-         $_SESSION['mdp']=$_GET['mdp'];
+         $_SESSION['nom_personnage'] = $nom_personnage;
+         $_SESSION['niveau_personnage'] = $niveau_personnage;
+         $_SESSION['date_creation'] = $date_creation;
 
          header('Location: verif_personnage.php');
 
@@ -16,7 +20,6 @@ try {
      else {
          header('Location: ../index.php');
      }
- }
 } catch (PDOException $e) {
  print "Erreur !: " . $e->getMessage() . "<br/>";
  die();

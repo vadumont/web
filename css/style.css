@@ -55,18 +55,33 @@ nav a:hover {
 }
 
 .div3 {
-    flex: 1;
+    flex: 2;
 }
 
 .titres {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 130px;
+    margin-left: 110px;
 }
 
 .connecte_text {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     margin-top: 50px;
+}
+
+.erreur_connecte_text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+
+#code_register {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 70px;
 }
 
 .titre_contact {
