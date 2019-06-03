@@ -17,7 +17,7 @@ $header = "<html>
         <nav>
             <ul>
                 <li class=\"menu\"><a href=\"index.php\">Accueil</a></li>
-                <li class=\"menu\"><a href=\"hall_of_fame.php\">Hall of Fame</a></li>
+                <li class=\"menu\"><a href=\"liste_personnage.php\">Liste Personnages</a></li>
                 <li class=\"menu\"><a href=\"contact.php\">Contact</a></li>
                 <li class=\"menu\"><a href=\"about.php\">A propos</a></li>
 

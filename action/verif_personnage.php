@@ -13,7 +13,7 @@
             $niveau_max=0;
 
             foreach($result as $raw) {
-                if($raw['perso_niveau'] > $niveau_max) {
+                if($raw['perso_niveau'] > $niveau_max && $raw['est_vivant'] = 1) {
                     $niveau_max = $raw['perso_niveau'];
                     $nom_personnage = $raw['perso_nom'];
                     $date_personnage = $raw['date_creation'];

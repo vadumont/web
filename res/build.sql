@@ -21,6 +21,17 @@ CREATE TABLE personnage (
 
 );
 
+CREATE TABLE combat (
+    combat_id INT NOT NULL AUTO_INCREMENT,
+    attaquant_id INT NOT NULL,
+    victime_id INT NOT NULL,
+    attaquant_gagne BOOL NOT NULL,
+    date_combat DATE NOT NULL,
+    CONSTRAINT PK_C_ID PRIMARY KEY (combat_id),
+    CONSTRAINT FK_C_A_ID FOREIGN KEY (attaquant_id) REFERENCES personnage(perso_id),
+    CONSTRAINT FK_C_V_ID FOREIGN KEY (victime_id) REFERENCES personnage(perso_id)
+);
+
 
 -- Insertion des utilisateurs
 
@@ -36,6 +47,11 @@ INSERT INTO utilisateur VALUES
 INSERT INTO personnage VALUE  (0,'Léodagan', 30, '2019/05/27', 'david@test.fr');
 INSERT INTO personnage VALUE  (0,'Le Roi Arthur', 52, '2019/05/27', 'theking@test.fr');
 INSERT INTO personnage VALUE  (0,'Perceval', 18, '2019/05/27', 'romuald@test.fr');
+
+
+-- Insertion des combats
+INSERT INTO combat VALUE (0, 1, 3, 1, '2019/06/03');
+INSERT INTO combat VALUE (0, 2, 1, 1, '2019/06/03');
 
 -- md5('value')
 -- date AAAA-MM-JJ 
