@@ -1,5 +1,7 @@
 <?php
     include 'design.php';
+    include 'action/sql_util.php';
+
     session_start();
     echo "$header";
 
@@ -14,11 +16,11 @@
                         <th>PERSONNAGE</th>
                         <th>NIVEAU</th>
                         <th>DATE DE CREATION</th>
+                        <th>COMBATTRE</th>
                     </tr>
     ";
 
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=web', 'root', '');
         $result=$pdo->query("SELECT U.pseudo, P.perso_nom, P.perso_niveau, P.date_creation from personnage P, utilisateur U WHERE P.est_vivant=1 AND P.user_id=U.mail");
             if($result!=false){
     
@@ -34,6 +36,7 @@
                     echo "<td>$perso_nom</td>";
                     echo "<td>$perso_niveau</td>";
                     echo "<td>$perso_date</td>";
+                    echo "<td><a href=\"combattre.php?perso_nom=$perso_nom&perso_niveau=$perso_niveau\">Combattre</a></td>";
                     echo "</tr>";
                 }
 

@@ -1,4 +1,5 @@
 <?php 
+    include 'sql_util.php';
 
     $loginForm = $_GET['pseudo'];
     $mdpForm = md5($_GET['mdp']);

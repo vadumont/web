@@ -44,7 +44,7 @@ INSERT INTO utilisateur VALUES
 
 -- Insertion des personnages
 
-INSERT INTO personnage VALUE  (0,'Léodagan', 30, '2019/05/27', 'david@test.fr');
+INSERT INTO personnage VALUE  (0,'Leodagan', 30, '2019/05/27', 'david@test.fr');
 INSERT INTO personnage VALUE  (0,'Le Roi Arthur', 52, '2019/05/27', 'theking@test.fr');
 INSERT INTO personnage VALUE  (0,'Perceval', 18, '2019/05/27', 'romuald@test.fr');
 

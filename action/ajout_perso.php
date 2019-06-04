@@ -1,12 +1,13 @@
 <?php
 
+include 'sql_util.php';
+
 $user_mail = $_SESSION['mail'];
 $nom_personnage = $_SESSION['nom_personnage'];
 $niveau_personnage = $_SESSION['niveau_personnage'];
 $date_creation = date('Y-m-d');
 
 try {
- $pdo = new PDO('mysql:host=localhost;dbname=web', 'root', '');
  $result = $pdo->query("INSERT INTO personnage VALUE (0, '$nom_personnage', '$niveau_personnage', '$date_creation', '$user_mail'");
      if($result != false ){
 

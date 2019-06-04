@@ -1,4 +1,6 @@
 <?php
+    include 'sql_util.php';
+    
     session_start();
 
     $user_mail = $_SESSION['mail'];
@@ -6,7 +8,6 @@
     $date_personnage = null;
 
    try {
-    $pdo = new PDO('mysql:host=localhost;dbname=web', 'root', '');
     $result=$pdo->query("SELECT * from personnage WHERE user_id='$user_mail'");
         if($result!=false){
 
